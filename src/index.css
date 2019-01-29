@@ -1,14 +1,73 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f9fa !important;
+    font-family: sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.right-border {
+    border-right: 3px solid #fbfbfb;
+    width: 5px;
+    position: absolute;
+    top: -18px;
+    right: 25px;
+    opacity: 0.7;
+    height: 70px;
+}
+::placeholder {
+    color: #a6a6a6;
+    font-size: 16px;
+}
+.navbar {
+    -webkit-box-shadow: 0px 1px 0px 4px rgba(245,245,245,0.42);
+    -moz-box-shadow: 0px 1px 0px 4px rgba(245,245,245,0.42);
+    box-shadow: 0px 1px 0px 4px rgba(245,245,245,0.42);
+}
+.sidebar-nav {
+    background-color: white;
+    width: 225px;
+    margin-top: 2px;
+    padding: 10px 45px 15px 45px;
+    list-style: none;
+    -webkit-box-shadow: 0px 0px 30px 33px rgba(245,245,245,0.5);
+    -moz-box-shadow: 0px 0px 30px 33px rgba(245,245,245,0.5);
+    box-shadow: 0px 0px 30px 33px rgba(245,245,245,0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.sidebar-nav li {
+    flex-direction: row;
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li div {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+}
+
+.sidebar-nav li div:hover,
+.sidebar-nav li div:active,
+.sidebar-nav li div:focus,
+.sidebar-nav li.open div:hover,
+.sidebar-nav li.open div:active,
+.sidebar-nav li.open div:focus{
+    color: rgba(0,173,255,.54);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #222;
+    box-shadow: none;
 }
