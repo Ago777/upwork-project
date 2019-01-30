@@ -1,20 +1,13 @@
 body {
-    background-color: #f8f9fa !important;
+    background-color: #f6f9fc !important;
+    max-width: 1500px !important;
+    margin: 0 auto !important;
     font-family: sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.right-border {
-    border-right: 3px solid #fbfbfb;
-    width: 5px;
-    position: absolute;
-    top: -18px;
-    right: 25px;
-    opacity: 0.7;
-    height: 70px;
-}
 ::placeholder {
-    color: #a6a6a6;
+    color: #94979b;
     font-size: 16px;
 }
 .navbar {
@@ -25,7 +18,7 @@ body {
 .sidebar-nav {
     background-color: white;
     width: 225px;
-    margin-top: 2px;
+    margin-top: 3px;
     padding: 10px 45px 15px 45px;
     list-style: none;
     -webkit-box-shadow: 0px 0px 30px 33px rgba(245,245,245,0.5);
@@ -42,12 +35,12 @@ body {
 
 .sidebar-nav li div {
     display: block;
-    color: #a6a6a6;
+    color: #94979b;
     text-decoration: none;
     padding: 10px 0 10px 0;
     cursor: pointer;
     font-size: 15px;
-    letter-spacing: 0.7px;
+    letter-spacing: 0.3px;
 }
 
 .sidebar-nav li div:hover,
@@ -56,9 +49,18 @@ body {
 .sidebar-nav li.open div:hover,
 .sidebar-nav li.open div:active,
 .sidebar-nav li.open div:focus{
-    color: rgba(0,173,255,.54);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    color: #1fa0cb;
     text-decoration: none;
     background-color: transparent;
+}
+
+.sidebar-nav li .active {
+    color: #1fa0cb
 }
 
 .sidebar-nav .dropdown-menu {
@@ -70,4 +72,14 @@ body {
     border: none;
     background-color: #222;
     box-shadow: none;
+}
+
+.material-icons {
+    line-height: unset;
+}
+
+.navbar .menu-btn {
+    height: 12px;
+    width: 24px;
+    fill: #94979b
 }
