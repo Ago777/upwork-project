@@ -1,0 +1,60 @@
+.sidebar {
+    float: left;
+    width: 220px;
+}
+.sidebar-nav {
+    background-color: white;
+    margin-top: 3px;
+    padding: 10px 45px 15px 45px;
+    list-style: none;
+    -webkit-box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
+    -moz-box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
+    box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
+}
+
+.sidebar-nav li {
+    flex-direction: row;
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li div {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.sidebar-nav li div:hover,
+.sidebar-nav li div:active,
+.sidebar-nav li div:focus,
+.sidebar-nav li.open div:hover,
+.sidebar-nav li.open div:active,
+.sidebar-nav li.open div:focus{
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    color: #1fa0cb;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidebar-nav li .active {
+    color: #1fa0cb
+}
+
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #222;
+    box-shadow: none;
+}
