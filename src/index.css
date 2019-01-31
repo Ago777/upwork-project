@@ -5,7 +5,7 @@ body {
     max-width: 1500px !important;
     margin: 0 auto !important;
     color: #94979b;
-    font-family: sans-serif !important;
+    font-family: Nunito,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

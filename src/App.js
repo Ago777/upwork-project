@@ -1,8 +1,9 @@
 import {Redirect, Route, Switch, BrowserRouter as Router, withRouter} from 'react-router-dom';
 import React, {Component, Fragment} from 'react';
 import Error from './shared/components/error';
-import MainApp from "./containers/main-app";
 import {defaultStartPath} from './constants';
+import MainApp from "./containers/main-app";
+import Login from "./containers/Login";
 import {Provider} from "react-redux";
 
 
@@ -19,16 +20,16 @@ const InitialPath = ({component: Component, isLoggedIn, ...rest}) =>
 
 class App extends Component {
     render() {
-        const {location} = this.props;
-        if (location.pathname === '/' && true) {
+        const {location, match} = this.props;
+        if ((location.pathname === '/'  || location.pathname==='/app'|| location.pathname==='/app/') && true) {
             return (<Redirect to={defaultStartPath}/>);
         }
         return (
             <Fragment>
                 <Router>
                     <Switch>
-                        <InitialPath isLoggedIn={true} component={MainApp}/>
-                        <Route path={'/login'} component={''}/>
+                        <InitialPath isLoggedIn={true} component={MainApp} path={`${match.url}app`}/>
+                        <Route path={'/login'} component={Login}/>
                         <Route path={'/error'} component={Error}/>
                         <Redirect to="/error"/>
                     </Switch>

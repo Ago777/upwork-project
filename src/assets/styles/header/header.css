@@ -16,13 +16,23 @@
     fill: #94979b
 }
 
-
 .navbar .d-inline-flex {
-    padding-left: 30px
+    padding-left: 45px
 }
 
-.navbar .logo {
-    margin-left: 80px;
+.navbar .menu {
+    margin-left: 65px;
+}
+
+.navbar .header-logo {
+    background: url(../../images/logo.jpg);
+    background-size: cover;
+    width: 70px;
+    height: 40px;
+}
+
+.navbar .material-icons {
+    font-size: 22px;
 }
 
 .navbar .search {
@@ -30,15 +40,44 @@
     outline: none
 }
 
-.navbar .dropdown img {
-    border-radius: 30px;
-    width: 40px
-}
+/*.navbar .dropdown img {*/
+/*border-radius: 30px;*/
+/*width: 40px;*/
+/*height: 40px;*/
+/*}*/
+
 .navbar .dropdown {
     margin-left: 20px;
+    display: inherit;
 }
 
+.navbar .profile-pic {
+    background: url(../../images/profile.jpg);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px
+}
+
+.navbar .dropdown-menu {
+    left: unset;
+    right: 0;
+}
+
+.navbar .dropdown-menu .dropdown-item:active {
+    color: unset;
+    background-color: unset;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    color: #1fa0cb;
+}
 
 .navbar .btn.dropdown-toggle {
     box-shadow: none;
+}
+
+.navbar .btn.dropdown-toggle span {
+    padding-right: 5px;
+    font-size: 17px;
 }
