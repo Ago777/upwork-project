@@ -1,15 +1,26 @@
 .sidebar {
     float: left;
     width: 220px;
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -ms-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
 }
+
+.sidebar.hide {
+    margin-top: -1000px;
+    z-index: 0
+}
+
 .sidebar-nav {
     background-color: white;
     margin-top: 3px;
-    padding: 10px 45px 15px 45px;
+    padding: 10px 45px 60px 45px;
     list-style: none;
-    -webkit-box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
-    -moz-box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
-    box-shadow: 0 0 30px 33px rgba(245,245,245,0.5);
+    -webkit-box-shadow: 0 0 30px 33px rgba(245, 245, 245, 0.5);
+    -moz-box-shadow: 0 0 30px 33px rgba(245, 245, 245, 0.5);
+    box-shadow: 0 0 30px 33px rgba(245, 245, 245, 0.5);
 }
 
 .sidebar-nav li {
@@ -24,7 +35,7 @@
     text-decoration: none;
     padding: 10px 0 10px 0;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.3px;
 }
 
@@ -33,12 +44,12 @@
 .sidebar-nav li div:focus,
 .sidebar-nav li.open div:hover,
 .sidebar-nav li.open div:active,
-.sidebar-nav li.open div:focus{
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+.sidebar-nav li.open div:focus {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     color: #1fa0cb;
     text-decoration: none;
     background-color: transparent;
@@ -58,3 +69,15 @@
     background-color: #222;
     box-shadow: none;
 }
+@media (max-width: 576px) {
+    .sidebar {
+        width: 160px;
+    }
+    .sidebar .sidebar-nav {
+        padding-left: 12px;
+    }
+    .sidebar-nav li div {
+        font-size: 11px;
+    }
+}
+

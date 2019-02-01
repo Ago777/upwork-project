@@ -12,6 +12,7 @@ body {
 
 .App {
     margin: 0 35px 0 35px;
+    overflow: hidden;
 }
 
 .material-icons {
@@ -20,3 +21,8 @@ body {
     margin-right: 12px;
 }
 
+@media (max-width: 960px) {
+    .App {
+        margin: 0
+    }
+}

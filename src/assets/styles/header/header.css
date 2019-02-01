@@ -7,13 +7,15 @@
     -webkit-box-shadow: 0 1px 0 4px rgba(245, 245, 245, 0.42);
     -moz-box-shadow: 0 1px 0 4px rgba(245, 245, 245, 0.42);
     box-shadow: 0 1px 0 4px rgba(245, 245, 245, 0.42);
-    padding: 12px 0 12px 0;
+    padding: 8px 0 8px 0;
+    z-index: 5;
 }
 
-.navbar .menu-btn {
-    height: 12px;
-    width: 24px;
-    fill: #94979b
+.navbar .header-logo {
+    background: url(../../img/logo.jpg);
+    background-size: cover;
+    width: 70px;
+    height: 40px;
 }
 
 .navbar .d-inline-flex {
@@ -22,13 +24,13 @@
 
 .navbar .menu {
     margin-left: 65px;
+    cursor: pointer;
 }
 
-.navbar .header-logo {
-    background: url(../../img/logo.jpg);
-    background-size: cover;
-    width: 70px;
-    height: 40px;
+.navbar .menu-btn {
+    height: 12px;
+    width: 24px;
+    fill: #94979b
 }
 
 .navbar .material-icons {
@@ -45,14 +47,6 @@
     display: inherit;
 }
 
-.navbar .profile-pic {
-    background: url(../../img/profile.jpg);
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    border-radius: 30px
-}
-
 .navbar .dropdown-menu {
     left: unset;
     right: 0;
@@ -67,11 +61,60 @@
     color: #1fa0cb;
 }
 
+.navbar .profile-pic {
+    background: url(../../img/profile.jpg);
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px
+}
+
 .navbar .btn.dropdown-toggle {
     box-shadow: none;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .btn.dropdown-toggle span {
+    padding-left: 8px;
     padding-right: 5px;
     font-size: 17px;
+}
+
+@media (max-width: 769px) {
+    .navbar .header-logo {
+        width: 40px;
+        height: 30px;
+        margin-right: 30px;
+    }
+
+    .navbar .form-inline {
+        margin-left: -30px;
+    }
+
+    .navbar .dropdown-toggle span,
+    .navbar .dropdown-toggle::after,
+    .navbar .help {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .menu {
+        margin-left: 35px;
+    }
+
+    .navbar .search.hide {
+        display: none;
+    }
+
+    .navbar .profile-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar .d-inline-flex {
+        padding-left: 12px;
+        padding-right: 0px;
+    }
 }

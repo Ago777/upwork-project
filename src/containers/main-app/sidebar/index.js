@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 
 class SideBar extends Component {
+
     render() {
+        const {toggleClass} = this.props.config;
         return (
-            <div className='sidebar'>
+            <div className={`sidebar ${toggleClass}`}>
                 <ul className="sidebar-nav">
                     <li>
                         <div className={`d-flex align-items-center ${true? 'active': ''}`}>

@@ -6,12 +6,33 @@ import Header from "./header";
 
 
 class MainApp extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isMenuShown: document.documentElement.clientWidth >= 960
+        }
+    };
+
+    componentDidMount() {
+        window.addEventListener('resize', () => this.windowResizeHandler());
+    };
+
+
+    windowResizeHandler = () => {
+        const documentWidth = document.documentElement.clientWidth;
+        this.setState({
+            isMenuShown: documentWidth >= 960
+        });
+    };
+
     render() {
-        const {match} = this.props;
+        const {props: {match}, state: {isMenuShown}} = this;
+        const toggleClass = isMenuShown ? '' : 'hide';
+
         return (
             <div className='App'>
-                <Header/>
-                <SideBar/>
+                <Header config={{toggleSideBar: () => this.setState({isMenuShown: !isMenuShown})}}/>
+                <SideBar config={{toggleClass}}/>
                 <Switch>
                     <Route path={`${match.url}/dashboard`} component={dashboard}/>
                     <Redirect to="/error"/>
