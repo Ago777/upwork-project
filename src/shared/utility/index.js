@@ -1,0 +1,1 @@
+export const getDocumentWidth = () => document.documentElement.clientWidth

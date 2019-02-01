@@ -30,21 +30,26 @@
     width: 100%;
 }
 
-.sidebar-nav li div {
-    display: block;
+.sidebar-nav li a {
+    display: flex;
     text-decoration: none;
     padding: 10px 0 10px 0;
     cursor: pointer;
+    color: #94979b;
     font-size: 16px;
     letter-spacing: 0.3px;
 }
 
-.sidebar-nav li div:hover,
-.sidebar-nav li div:active,
-.sidebar-nav li div:focus,
-.sidebar-nav li.open div:hover,
-.sidebar-nav li.open div:active,
-.sidebar-nav li.open div:focus {
+.sidebar-nav li a.active {
+    color: #1fa0cb;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -53,10 +58,6 @@
     color: #1fa0cb;
     text-decoration: none;
     background-color: transparent;
-}
-
-.sidebar-nav li .active {
-    color: #1fa0cb
 }
 
 .sidebar-nav .dropdown-menu {
@@ -69,15 +70,26 @@
     background-color: #222;
     box-shadow: none;
 }
-@media (max-width: 576px) {
+
+@media (max-width: 769px) {
     .sidebar {
-        width: 160px;
+        position: absolute;
     }
+
     .sidebar .sidebar-nav {
-        padding-left: 12px;
-    }
-    .sidebar-nav li div {
-        font-size: 11px;
+        box-shadow: unset;
     }
 }
+
+/*@media (max-width: 576px) {*/
+/*.sidebar {*/
+/*width: 160px;*/
+/*}*/
+/*.sidebar .sidebar-nav {*/
+/*padding-left: 12px;*/
+/*}*/
+/*.sidebar-nav li div {*/
+/*font-size: 11px;*/
+/*}*/
+/*}*/
 

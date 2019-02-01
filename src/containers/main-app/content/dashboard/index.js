@@ -4,7 +4,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className='dashboard'>
-                <h1>Dashboard</h1>
+                <h1>Dashboard SOON</h1>
             </div>
         );
     }

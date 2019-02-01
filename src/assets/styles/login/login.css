@@ -33,7 +33,7 @@
 
 .form-side {
     width: 100%;
-    padding: 60px 100px;
+    padding: 45px 70px;
 }
 
 .login .logo {
@@ -125,4 +125,19 @@
 }
 .login .btn-lg span {
     font-size: 15px;
+}
+@media (max-width: 576px) {
+    .form-side {
+        padding: 30px 30px;
+    }
+    .login .d-flex a {
+        font-size: 12px;
+    }
+    .login .btn-lg {
+        padding: 0 25px 0 25px;
+        line-height: 25px;
+    }
+    .login .btn-lg span {
+        font-size: 10px;
+    }
 }

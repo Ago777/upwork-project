@@ -1,67 +1,68 @@
+import {NavLink} from "react-router-dom";
 import React, {Component} from 'react';
 
 class SideBar extends Component {
 
     render() {
-        const {toggleClass} = this.props.config;
+        const {toggleClass} = this.props;
         return (
             <div className={`sidebar ${toggleClass}`}>
                 <ul className="sidebar-nav">
                     <li>
-                        <div className={`d-flex align-items-center ${true? 'active': ''}`}>
+                        <NavLink to='/app/dashboard'>
                             <i className='material-icons'>dashboard</i>
-                            Dashboard
-                        </div>
+                            <span>Dashboard</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/appointments'>
                             <i className='material-icons'>schedule</i>
-                            Appointments
-                        </div>
+                            <span>Appointments</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/reminders'>
                             <i className='material-icons'>notifications_none</i>
-                            Reminders
-                        </div>
+                            <span>Reminders</span>
+                        </NavLink>
                     </li>
                     <hr className='mt-2 mb-2'/>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/calendar'>
                             <i className='material-icons'>calendar_today</i>
-                            Calendar
-                        </div>
+                            <span>Calendar</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/patients'>
                             <i className='material-icons'>people</i>
-                            Patients
-                        </div>
+                            <span>Patients</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/phones'>
                             <i className='material-icons'>local_phone</i>
-                            Phone Leads
-                        </div>
+                            <span>Phone Leads</span>
+                        </NavLink>
                     </li>
                     <hr className='mt-2 mb-2'/>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/reviews'>
                             <i className='material-icons'>star</i>
-                            Reviews
-                        </div>
+                            <span>Reviews</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/ceo'>
                             <i className='material-icons'>trending_up</i>
-                            SEO
-                        </div>
+                            <span>SEO</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <div className={`d-flex align-items-center ${false? 'active': ''}`}>
+                        <NavLink to='/app/listings'>
                             <i className='material-icons'>location_on</i>
-                            Listings
-                        </div>
+                            <span>Listings</span>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

@@ -6,8 +6,8 @@ class Login extends Component {
             <Fragment>
                 <div className='fixed-background'/>
                 <div className="container login">
-                    <div className="h-100 row">
-                        <div className="col-12 col-md-10">
+                    <div className="h-100 row justify-content-center">
+                        <div className="col-12 col-md-8">
                             <div className="auth-card card">
                                 <div className="form-side">
                                     <span className="logo"/>
