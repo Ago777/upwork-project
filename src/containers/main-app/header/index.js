@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-// import logo from "../../../assets";
-// import profile from "../../../../assets/images/dr.png";
 
 class Header extends Component {
     render() {
