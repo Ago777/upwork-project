@@ -1,5 +1,7 @@
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Provider} from "react-redux";
+import store from "./redux-store";
 import ReactDOM from 'react-dom';
 import React from 'react';
 import App from './App';
@@ -9,11 +11,13 @@ import 'bootstrap';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <Router>
-        <Switch>
-            <Route path="/" component={App} />
-        </Switch>
-    </Router>,
+    <Provider store={store}>
+        <Router>
+            <Switch>
+                <Route path="/" component={App}/>
+            </Switch>
+        </Router>
+    </Provider>,
     document.getElementById('root')
 );
 

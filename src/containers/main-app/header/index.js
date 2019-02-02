@@ -1,6 +1,18 @@
+import {logoutAction} from "../../../redux-store/actions";
+import {withRouter} from 'react-router-dom';
+import {bindActionCreators} from "redux";
 import React, {Component} from 'react';
+import {connect} from "react-redux";
+import PropTypes from "prop-types";
 
 class Header extends Component {
+    static propTypes = {
+        logoutAction: PropTypes.func.isRequired,
+    }
+
+    handleLogout = () => {
+        logoutAction(this.props.history);
+    };
 
     render() {
         const {props: {toggleSideBar, isMobileSearchShown, searchFieldToggle}} = this;
@@ -40,7 +52,8 @@ class Header extends Component {
                                 <span>Transformologie</span>
                             </button>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button className="dropdown-item" type="button">Sign Out</button>
+                                <button className="dropdown-item" type="button" onClick={this.handleLogout}>Sign Out
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -50,4 +63,21 @@ class Header extends Component {
     }
 }
 
-export default Header;
+// const mapStateToProps = (state) => {
+//     const loading = state.auth.loading;
+//
+//     return {
+//         loading,
+//     };
+// };
+
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(
+        {
+            logoutAction,
+        },
+        dispatch
+    );
+};
+
+export default connect(null, mapDispatchToProps)(withRouter(Header));
