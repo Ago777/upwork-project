@@ -3,7 +3,6 @@ import doAction from "../shared";
 
 
 export const loginAction = (username, password) => {
-
     return dispatch => {
          dispatch(doAction(actionTypes.LOGIN_PENDING));
     };
@@ -11,10 +10,8 @@ export const loginAction = (username, password) => {
 };
 
 export const logoutAction = (history) => {
-
     return dispatch => {
-        // localStorage.removeItem('user');
-        dispatch(doAction(actionTypes.LOGOUT));
-    };
+        dispatch(doAction(actionTypes.LOGOUT))
+    }
 };
 

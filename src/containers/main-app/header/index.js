@@ -11,6 +11,7 @@ class Header extends Component {
     }
 
     handleLogout = () => {
+        const {logoutAction} = this.props;
         logoutAction(this.props.history);
     };
 
