@@ -1,15 +1,15 @@
 .sidebar {
     float: left;
     width: 220px;
-    -webkit-transition: margin-top 1s;
-    -moz-transition: margin-top 1s;
-    -ms-transition: margin-top 1s;
-    -o-transition: margin-top 1s;
-    transition: margin-top 1s;
+    -webkit-transition: margin-left 1s;
+    -moz-transition: margin-left 1s;
+    -ms-transition: margin-left 1s;
+    -o-transition: margin-left 1s;
+    transition: margin-left 1s;
 }
 
 .sidebar.hide {
-    margin-top: -1000px;
+    margin-left: -222px;
     z-index: 0
 }
 

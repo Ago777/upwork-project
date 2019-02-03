@@ -30,11 +30,10 @@ class Login extends Component {
     handleLogin = () => {
         const {state: {username, password}, props: {loginAction}} = this;
         if(!username.trim() || !password.trim())  return null;
-        loginAction(username, password);
+        loginAction(username, password, this.props.history);
     };
 
     render() {
-        console.log(this.props.loading)
         return (
             <Fragment>
                 <div className='fixed-background'/>

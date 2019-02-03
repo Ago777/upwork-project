@@ -30,7 +30,16 @@
 .navbar .menu-btn {
     height: 12px;
     width: 24px;
-    fill: #94979b
+    fill: #94979b;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -ms-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+}
+
+.navbar .menu-btn:hover{
+    fill: #1fa0cb;
 }
 
 .navbar .material-icons {
@@ -81,6 +90,9 @@
     padding-left: 8px;
     padding-right: 5px;
     font-size: 17px;
+}
+.navbar .btn.dropdown-toggle:hover{
+    color: #1fa0cb;
 }
 
 @media (max-width: 769px) {

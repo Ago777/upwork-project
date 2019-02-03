@@ -55,18 +55,20 @@ class MainApp extends Component {
                     isMobileSearchShown={isMobileSearchShown}
                 />
                 <SideBar toggleClass={toggleClass}/>
-                <Switch>
-                    <Route path={`${match.url}/dashboard`} component={Dashboard}/>
-                    <Route path={`${match.url}/appointments`} component={Appointments}/>
-                    <Route path={`${match.url}/reminders`} component={Reminders}/>
-                    <Route path={`${match.url}/calendar`} component={Calendar}/>
-                    <Route path={`${match.url}/patients`} component={Patients}/>
-                    <Route path={`${match.url}/phones`} component={Phones}/>
-                    <Route path={`${match.url}/reviews`} component={Reviews}/>
-                    <Route path={`${match.url}/ceo`} component={Ceo}/>
-                    <Route path={`${match.url}/listings`} component={Listings}/>
-                    <Redirect to="/error"/>
-                </Switch>
+                <div className='main-content'>
+                    <Switch>
+                        <Route path={`${match.url}/dashboard`} component={Dashboard}/>
+                        <Route path={`${match.url}/appointments`} component={Appointments}/>
+                        <Route path={`${match.url}/reminders`} component={Reminders}/>
+                        <Route path={`${match.url}/calendar`} component={Calendar}/>
+                        <Route path={`${match.url}/patients`} component={Patients}/>
+                        <Route path={`${match.url}/phones`} component={Phones}/>
+                        <Route path={`${match.url}/reviews`} component={Reviews}/>
+                        <Route path={`${match.url}/ceo`} component={Ceo}/>
+                        <Route path={`${match.url}/listings`} component={Listings}/>
+                        <Redirect to="/error"/>
+                    </Switch>
+                </div>
             </div>
         );
     }

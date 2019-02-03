@@ -1,5 +1,4 @@
 import {logoutAction} from "../../../redux-store/actions";
-import {withRouter} from 'react-router-dom';
 import {bindActionCreators} from "redux";
 import React, {Component} from 'react';
 import {connect} from "react-redux";
@@ -81,4 +80,4 @@ const mapDispatchToProps = (dispatch) => {
     );
 };
 
-export default connect(null, mapDispatchToProps)(withRouter(Header));
+export default connect(null, mapDispatchToProps)(Header);

@@ -1,1 +1,1 @@
-export const defaultStartPath = 'app/dashboard';
+export const defaultStartPath = '/app/dashboard';

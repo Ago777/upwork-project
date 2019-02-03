@@ -21,6 +21,11 @@ body {
     margin-right: 12px;
 }
 
+.main-content {
+    padding: 30px;
+    overflow: hidden;
+}
+
 @media (max-width: 960px) {
     .App {
         margin: 0

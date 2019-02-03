@@ -1,0 +1,74 @@
+.listings .page-name,
+.listings .step{
+    color: #22263c;
+    margin-bottom: 40px;
+}
+.listings .page-name h2 {
+    font-weight: 700;
+}
+
+.listings .step .material-icons {
+    font-size: 30px;
+}
+.listings .step-text span {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+.listings .item {
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px -6px #94979b;
+   -webkit-transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -ms-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+}
+.listings .item:hover {
+    box-shadow: 0 0 15px 4px #94979b;;
+}
+
+.item-img {
+    background: url(../../img/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 75px;
+}
+
+.listings .live {
+    color: #08a308;
+}
+
+.listings .pending {
+    color: orange
+}
+
+.listings .live .material-icons{
+    font-size: 8px;
+}
+
+.listings .pending .material-icons {
+    font-size: 8px;
+}
+
+.listings .view-listing {
+    border: 1.5px solid #a3a3a3;
+    border-radius: 25px;
+    width: 130px;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.listings .view-listing:hover {
+    background-color: #22263c;
+    border-color: #22263c;
+    color: white
+}
+.listings .view-listing .material-icons {
+    font-size: 17px;
+}

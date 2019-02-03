@@ -1,5 +1,6 @@
 const initialState = {
-    isLoggedIn: true,
+    isLoggedIn: false,
+    user: localStorage.getItem('user'),
     loading: false
 };
 
@@ -8,11 +9,11 @@ const auth = (state = initialState, action) => {
         case 'LOGIN_PENDING':
             return {...state, loading: true};
         case 'LOGIN_SUCCESS':
-            return {...state, loading: false, isLoggedIn: true};
+            return {...state, loading: false, isLoggedIn: true, user: action.payload.user};
         case 'LOGIN_FAILED':
             return {...state, loading: false};
         case 'LOGOUT':
-            return {...state, isLoggedIn: false};
+            return {...state, isLoggedIn: false, user: null};
         default:
             return {...state};
     }
